@@ -1,7 +1,7 @@
 import React from "react";
 
 class Button extends React.Component{
-    shouldComponentUpdate(nextProps,nextState)
+  /*  shouldComponentUpdate(nextProps,nextState)
     {
         const {change:current}=this.props.change;
         const {change:next}=nextProps.change;
@@ -11,12 +11,17 @@ class Button extends React.Component{
         }
         else
         return true;
-    }
+    }*/
 render(){
     console.log("Button");
-    const {locale}=this.props.locale;
+    const {locale,enable}=this.props;
+    if(!enable)
+    return null;
     return (
-        <button type="button" onClick={()=> this.props.change(locale)}>Click Here</button>
+      <>  <button type="button" onClick={()=> this.props.change(locale)}>
+            {locale==='bn-BD'? 'Change to bn-BD':'Change to en-UK'}
+        </button>
+        {this.props.show &&<p>Hello</p>}</>
     );
 }
 }

@@ -9,19 +9,11 @@ class Firstreact extends React.Component{
         this.nowDate=setInterval(()=>{this.changeDate()
         },1000);
     }
-    handleClick=()=>{
-      const {locale}=this.state;
-      if(locale==="bn-BD"){
+    handleClick=(locale)=>{
+      console.log(locale);
       this.setState({
-        locale:"en-US",
+        locale,
       })
-    }
-    else
-    {
-      this.setState({
-        locale:"bn-BD",
-      })
-    }
 
     }
     componentWillUnmount()
@@ -36,14 +28,20 @@ class Firstreact extends React.Component{
     render()
     {
         const {date,locale}=this.state;
-  
+      /*  let button;
+        if(locale==="bn-BD")
+       button= <Button change={this.handleClick} locale='en-US'/>
+        else
+        button= <Button change={this.handleClick} locale='bn-BD'/>*/
+
+
       return (
-        <div>
+        <>
       <h1 className='first react'>
       Hey I am Abid. and now it is time: {date.toLocaleTimeString(locale)}
     </h1>
-   <Button change={this.handleClick} locale='en-US'/>
-    </div>);
+  {locale==='bn-BD' ? <Button change={this.handleClick} locale='en-US' show enable/> : <Button change={this.handleClick} locale='bn-BD' enable/>}
+    </>);
     }
   }
   export default Firstreact;
