@@ -1,8 +1,9 @@
-import Firstreact from "./FirstReact";
+import ClockList from "./ClockList";
 
 function App() {
+  const list=[1,2,3]
   return (
-    <div><Firstreact/></div>
+    <div><ClockList list={list}/></div>
     );
      
 }
