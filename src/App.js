@@ -1,9 +1,8 @@
-import ClockList from "./ClockList";
-
+import Form from "./form";
 function App() {
-  const list=[1,2,3]
+ // const list=[1,2,3]
   return (
-    <div><ClockList list={list}/></div>
+    <div><Form/></div>
     );
      
 }
