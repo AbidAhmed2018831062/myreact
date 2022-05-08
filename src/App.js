@@ -1,8 +1,8 @@
-import Form from "./form";
+import Calculator from "./Calculator";
 function App() {
  // const list=[1,2,3]
   return (
-    <div><Form/></div>
+    <div><Calculator/></div>
     );
      
 }
