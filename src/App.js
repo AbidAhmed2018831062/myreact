@@ -1,8 +1,16 @@
-import Calculator from "./Calculator";
+import Bracket from "./Bracket";
+import Emoji from "./Emoji";
+import Text from "./Text";
 function App() {
  // const list=[1,2,3]
   return (
-    <div><Calculator/></div>
+    <Emoji>
+     {(addEmoji)=> 
+     <Bracket>
+    { (addBracket)=> <Text addEmoji={addEmoji} addBracket={addBracket}/>}
+     </Bracket>
+    }
+    </Emoji>
     );
      
 }
