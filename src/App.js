@@ -2,6 +2,7 @@
 // import Emoji from "./Emoji";
 // import Text from "./Text";
 import Click from "./HOC/Click";
+import HoverCounter from "./HOC/HoverCounter";
 function App() {
  // const list=[1,2,3]
   return (
@@ -13,7 +14,10 @@ function App() {
     // }
     // </Emoji>
     // );
+    <div>
    <Click/>
+   <HoverCounter/>
+   </div>
     )
      
 }
