@@ -4,9 +4,10 @@
 // import Click from "./HOC/Click";
 // import HoverCounter from "./HOC/HoverCounter";
 import React from 'react';
+import Section from '../src/contexts/Section';
+import themeContext from './contexts/themecontext';
 import Click from './RenderProp/Click';
 import ButtonClick from './RenderProp/ClickCounter';
-import HoverCounter from './RenderProp/HoverCounter';
 class  App extends React.Component {
  // const list=[1,2,3]
  render(){
@@ -26,8 +27,7 @@ class  App extends React.Component {
   <div>
     <Click
      render={ (count,incrementChange)=> <ButtonClick count={count} incrementCount={incrementChange}/>}/>
-      <Click
-     render={ (count,incrementChange)=> <HoverCounter count={count} incrementCount={incrementChange}/>}/>
+    <themeContext.Provider value={{theme:"Dark"}}><Section/></themeContext.Provider>
   </div>
     )
   }
