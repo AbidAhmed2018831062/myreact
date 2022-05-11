@@ -8,9 +8,9 @@ incrementChange=()=>{
 }
 render()
 {
-    const {render}=this.props;
+    const {children}=this.props;
 
-return render(this.state.count,this.incrementChange);
+return children(this.state.count,this.incrementChange);
 
     }
  }

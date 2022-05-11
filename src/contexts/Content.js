@@ -6,7 +6,14 @@ export default function Content (){
     return (
         <>
         <Click>
-     { (count,incrementChange)=> <themeContext.Consumer>{(value)=> <HoverCounter count={count} incrementCount={incrementChange} theme={value}/>}</themeContext.Consumer>
+     { (count,incrementChange)=> 
+     <themeContext.Consumer>
+         {
+         ({theme})=>{ //console.log(value);
+        return <HoverCounter count={count} incrementCount={incrementChange} theme={theme}/>
+        }
+    }
+   </themeContext.Consumer>
 }</Click>
         </>
     )
