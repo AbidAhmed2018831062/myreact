@@ -3,11 +3,13 @@
 // import Text from "./Text";
 // import Click from "./HOC/Click";
 // import HoverCounter from "./HOC/HoverCounter";
+import React from 'react';
 import Click from './RenderProp/Click';
 import ButtonClick from './RenderProp/ClickCounter';
 import HoverCounter from './RenderProp/HoverCounter';
-function App() {
+class  App extends React.Component {
  // const list=[1,2,3]
+ render(){
   return (
     // <Emoji>
     //  {(addEmoji)=> 
@@ -28,7 +30,7 @@ function App() {
      render={ (count,incrementChange)=> <HoverCounter count={count} incrementCount={incrementChange}/>}/>
   </div>
     )
-     
+  }
 }
 
 export default App;
