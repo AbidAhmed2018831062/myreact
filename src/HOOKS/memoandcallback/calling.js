@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useMemo } from "react";
 import Button from "./button";
 
 function Calling(){
@@ -10,13 +10,20 @@ function Calling(){
      const incrementByFive=useCallback(()=>{
         setCount2((prevState)=>prevState+5);
     },[]);
-
+const oddOrEven=useMemo(()=>
+{
+    let i=0;
+    while(i<10000000)
+    i++;
+    return count1%2===0
+},[count1])
     
 
     return(
         <div>
             <h1>HI I am Abid The Bahubali</h1>
             <p> Counter 1's value is {count1}</p>
+            <span>{oddOrEven?"Even" :"odd"}</span>
             <Button counter='1' changeCount={incrementByOne}/>
             <hr></hr>
             <p> Counter 2's value is {count2}</p>
