@@ -4,30 +4,27 @@
 // import Click from "./HOC/Click";
 // import HoverCounter from "./HOC/HoverCounter";
 import React from 'react';
-import Section from '../src/contexts/Section';
-import themeContext from './contexts/themecontext';
-import Click from './RenderProp/Click';
-import ButtonClick from './RenderProp/ClickCounter';
+import ToDo from './HOOKS/TODO(UseState0/Todo';
 class  App extends React.Component {
  // const list=[1,2,3]
- state={
-   theme:'dark',
-   changeTheme:()=>{
-     this.setState(({theme})=>{
-       if(theme==='dark'){
-       return ({
-         theme:'light'
-       })
-      }
-      else
-      {
-        return ({
-          theme:'dark'
-        })
-      }
-     })
-   }
- }
+//  state={
+//    theme:'dark',
+//    changeTheme:()=>{
+//      this.setState(({theme})=>{
+//        if(theme==='dark'){
+//        return ({
+//          theme:'light'
+//        })
+//       }
+//       else
+//       {
+//         return ({
+//           theme:'dark'
+//         })
+//       }
+//      })
+//    }
+//  }
  render(){
   return (
     // <Emoji>
@@ -42,13 +39,16 @@ class  App extends React.Component {
   //  <Click/>
   //  <HoverCounter/>
   //  </div>
-  <div>
-    <Click
-     render={ (count,incrementChange)=><ButtonClick count={count} incrementCount={incrementChange}/>}/>
-    <themeContext.Provider value={this.state}><Section/></themeContext.Provider>
-  </div>
-    )
+  // <div>
+  //   <Click
+  //    render={ (count,incrementChange)=><ButtonClick count={count} incrementCount={incrementChange}/>}/>
+  //   <themeContext.Provider value={this.state}><Section/></themeContext.Provider>
+  // </div>
+  //   
+  <ToDo/>
+  )
   }
+  
 }
 
 export default App;
