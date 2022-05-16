@@ -4,7 +4,7 @@
 // import Click from "./HOC/Click";
 // import HoverCounter from "./HOC/HoverCounter";
 import React from 'react';
-import Button from './HOOKS/TODO(UseState0/Button';
+import Useeffect from './HOOKS/TODO(UseState0/UseEffect';
 //import ToDo from './HOOKS/TODO(UseState0/Todo';
 class  App extends React.Component {
  // const list=[1,2,3]
@@ -47,7 +47,8 @@ class  App extends React.Component {
   // </div>
   //   
   //<ToDo/>
-  <Button/>
+//  <Button/>
+<Useeffect/>
   )
   }
   
