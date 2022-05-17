@@ -4,7 +4,7 @@
 // import Click from "./HOC/Click";
 // import HoverCounter from "./HOC/HoverCounter";
 import React from 'react';
-import Calling from './HOOKS/memoandcallback/calling';
+import UseRef from './HOOKS/useRef';
 //import ToDo from './HOOKS/TODO(UseState0/Todo';
 class  App extends React.Component {
  // const list=[1,2,3]
@@ -49,7 +49,8 @@ class  App extends React.Component {
   //<ToDo/>
 //  <Button/>
 //<Useeffect/>
-  <Calling/>
+ // <Calling/>
+ <UseRef/>
 )
   }
   
