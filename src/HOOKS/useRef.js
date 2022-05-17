@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Forward from './forwardRef';
 
 function UseRef()
 {
@@ -12,7 +13,7 @@ function UseRef()
 
 return(
     <div>
-        <textarea ref={inputRef}name="abid" placeholder='Enter something'></textarea>
+        <Forward ref={inputRef}name="abid" placeholder='Enter something'/>
     </div>
 )
 }
