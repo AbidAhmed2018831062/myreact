@@ -4,9 +4,10 @@
 // import Click from "./HOC/Click";
 // import HoverCounter from "./HOC/HoverCounter";
 import React from 'react';
+import ToDo from './HOOKS/UseReduce/useEffect';
 //import UseReduce from './HOOKS/UseReduce/Counter';
 //import ComCounter from './HOOKS/UseReduce/ComCounter';
-import MultipleCoun from './HOOKS/UseReduce/MultipleCoun';
+//import MultipleCoun from './HOOKS/UseReduce/MultipleCoun';
 //import UseRef from './HOOKS/useRef';
 //import ToDo from './HOOKS/TODO(UseState0/Todo';
 class  App extends React.Component {
@@ -56,7 +57,8 @@ class  App extends React.Component {
  //<UseRef/>
 //<UseReduce/>
 //<ComCounter/>
-<MultipleCoun/>
+//<MultipleCoun/>
+<ToDo/>
 )
   }
   
